@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import { useState, useEffect } from 'react';
 import { View, FlatList } from 'react-native';
 import NewsCard from '../Components/NewsCard';
