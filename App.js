@@ -1,29 +1,8 @@
 import 'react-native-gesture-handler';
-import { Button, View } from 'react-native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
-import News from './Screen/News';
-
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button
-        onPress={() => navigation.navigate('News')}
-        title="Welcome to the news!!"
-      />
-    </View>
-  );
-}
-
-const Drawer = createDrawerNavigator();
+import Navigation from './Drawer';
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="News" component={News}/>
-      </Drawer.Navigator>
-    </NavigationContainer>
+    <Navigation />
   );
 }
